@@ -26,15 +26,14 @@ public class Blanco {
 			//coordenadas polares
 			
 			this.posX = this.radio * sin(this.angulo);	
-			this.posY = this.radio * cos(this.angulo) + 1;	//El centro del blanco esta a 1 metro del piso
+			this.posY = this.radio * (1 - cos(this.angulo));	//El centro del blanco esta a 1 metro del piso
 			
 			a += 0.1;
 			tFin = System.currentTimeMillis();
 			tiempo = tFin - tIni;
-			
-//			out.println(this.angulo);
-//			out.println("Posicion X = " + this.posX);
-//			out.println("Posicion Y = " + this.posY);
+
+			out.println("Posicion X = " + this.posX);
+			out.println("Posicion Y = " + this.posY);
 		}
 	}
 
